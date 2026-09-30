@@ -3,6 +3,7 @@ import {
   BookA,
   BookOpen,
   FileText,
+  Paperclip,
   Languages,
   ListChecks,
   MessageSquare,
@@ -10,6 +11,7 @@ import {
 } from 'lucide-react'
 
 import { useT } from '../../i18n'
+import MediaView from './Media'
 import Speak from './Speak'
 
 /**
@@ -24,6 +26,7 @@ export const SECTION_TYPES = {
   dialogue: { label: 'Hội thoại', icon: MessageSquare },
   reading: { label: 'Đọc hiểu', icon: BookOpen },
   exercise: { label: 'Bài tập', icon: ListChecks },
+  media: { label: 'Tài liệu', icon: Paperclip },
   note: { label: 'Ghi chú', icon: FileText },
 }
 
@@ -271,6 +274,7 @@ const RENDERERS = {
   dialogue: Dialogue,
   reading: Reading,
   exercise: ({ content }) => <Questions questions={content} />,
+  media: ({ content }) => <MediaView content={content} />,
   note: () => null, // chỉ hiển thị phần body
 }
 

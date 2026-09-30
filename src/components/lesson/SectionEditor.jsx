@@ -1,6 +1,7 @@
 import { Plus, Trash2 } from 'lucide-react'
 
 import { useT } from '../../i18n'
+import MediaEditor from './MediaEditor'
 import { SECTION_TYPES } from './Sections'
 
 export const field =
@@ -125,6 +126,11 @@ export function initSection(section, order = '') {
     text: '',
     cards: [],
     reading: { passage: '', reading: '', translation: '', questions: '' },
+    media: [{ title: '', url: '' }],
+  }
+
+  if (type === 'media' && Array.isArray(content) && content.length) {
+    state.media = content.map((m) => ({ title: cell(m.title), url: cell(m.url) }))
   }
 
   if (LINE_TYPES[type]) state.text = LINE_TYPES[type].toText(Array.isArray(content) ? content : [])
@@ -162,6 +168,11 @@ export function buildSection(state, t) {
     content = state.cards
       .map((c) => stateToCard(cfg, c))
       .filter((c) => c[cfg.required])
+  } else if (state.type === 'media') {
+    content = state.media
+      .map((m) => ({ title: m.title.trim(), url: m.url.trim() }))
+      .filter((m) => m.url)
+    if (!content.length) throw new Error(t('Hãy thêm ít nhất một tài liệu.'))
   } else if (state.type === 'reading') {
     const r = state.reading
     content = {
@@ -282,6 +293,10 @@ export default function SectionEditor({ value, onChange, showOrder = false, onRe
             {t(cfg.add)}
           </button>
         </div>
+      )}
+
+      {type === 'media' && (
+        <MediaEditor value={value.media} onChange={(media) => set({ media })} />
       )}
 
       {type === 'reading' && (
