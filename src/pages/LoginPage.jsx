@@ -46,6 +46,7 @@ export default function LoginPage() {
     <main className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
       <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
         <div className="mb-8">
+          <img src="/logo.png" alt="" className="mb-4 h-16 w-auto" />
           <p className="mb-2 text-sm font-semibold text-indigo-600">
             Learning Language
           </p>

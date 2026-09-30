@@ -5,7 +5,6 @@ import {
   ClipboardCheck,
   House,
   Globe,
-  Languages,
   Layers3,
   LogOut,
   Menu,
@@ -86,7 +85,7 @@ export default function Header() {
           to="/dashboard"
           className="flex shrink-0 items-center gap-2 font-semibold text-white"
         >
-          <Languages size={20} />
+          <img src="/logo.png" alt="" className="h-8 w-auto" />
           <span className="hidden sm:inline">日本語</span>
         </NavLink>
 
