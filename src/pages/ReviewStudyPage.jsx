@@ -267,7 +267,7 @@ export default function ReviewStudyPage() {
 
   if (error) {
     return (
-      <div className="max-w-3xl">
+      <div className="mx-auto max-w-3xl">
 
         <div className="rounded-2xl bg-red-50 p-5 text-sm text-red-600">
           {error}
@@ -287,7 +287,7 @@ export default function ReviewStudyPage() {
 
   if (!cards.length) {
     return (
-      <div className="max-w-2xl">
+      <div className="mx-auto max-w-2xl">
 
         <Link
           to="/review"
@@ -319,7 +319,7 @@ export default function ReviewStudyPage() {
 
   if (finished) {
     return (
-      <div className="max-w-2xl">
+      <div className="mx-auto max-w-2xl">
 
         <div className="rounded-3xl border border-slate-200 bg-white p-9 text-center">
 
@@ -368,7 +368,7 @@ export default function ReviewStudyPage() {
     100
 
   return (
-    <div className="max-w-3xl">
+    <div className="mx-auto max-w-3xl">
 
       {/* HEADER */}
 

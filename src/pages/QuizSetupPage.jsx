@@ -139,7 +139,7 @@ export default function QuizSetupPage() {
 const canUseMultipleChoice =
   uniqueAnswerCount >= 4
   return (
-    <div className="max-w-3xl">
+    <div className="mx-auto max-w-3xl">
 
       <Link
         to="/quiz"

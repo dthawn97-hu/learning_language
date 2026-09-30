@@ -263,7 +263,7 @@ export default function FlashcardStudyPage() {
 
   if (error) {
     return (
-      <div className="max-w-3xl">
+      <div className="mx-auto max-w-3xl">
         <div className="rounded-2xl bg-red-50 p-5 text-red-600">
           {error}
         </div>
@@ -283,7 +283,7 @@ export default function FlashcardStudyPage() {
 
   if (!cards.length) {
     return (
-      <div className="max-w-3xl">
+      <div className="mx-auto max-w-3xl">
 
         <Link
           to="/flashcards"
@@ -325,7 +325,7 @@ export default function FlashcardStudyPage() {
         : 0
 
     return (
-      <div className="max-w-2xl">
+      <div className="mx-auto max-w-2xl">
 
         <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center">
 
@@ -418,7 +418,7 @@ export default function FlashcardStudyPage() {
     100
 
   return (
-    <div className="max-w-3xl">
+    <div className="mx-auto max-w-3xl">
 
       {/* HEADER */}
 

@@ -579,7 +579,7 @@ export default function QuizStudyPage() {
 
   if (error) {
     return (
-      <div className="max-w-3xl">
+      <div className="mx-auto max-w-3xl">
 
         <div className="rounded-2xl bg-red-50 p-5 text-sm text-red-600">
           {error}
@@ -622,7 +622,7 @@ export default function QuizStudyPage() {
         : 0
 
     return (
-      <div className="max-w-3xl">
+      <div className="mx-auto max-w-3xl">
 
         <div className="rounded-3xl border border-slate-200 bg-white p-8">
 
@@ -746,7 +746,7 @@ export default function QuizStudyPage() {
     100
 
   return (
-    <div className="max-w-3xl">
+    <div className="mx-auto max-w-3xl">
 
       {/* HEADER */}
 
